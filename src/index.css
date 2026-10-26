@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #070707;
+  --bg-secondary: #0D0D0D;
+  --bg-card: #101010;
+  --bg-elevated: #151515;
+  --gold-primary: #F5C542;
+  --gold-secondary: #D6A83E;
+  --gold-light: #FDE08B;
+  --gold-dark: #8C6A16;
+  --gold-border: rgba(245, 197, 66, 0.16);
+  --red-primary: #FF303B;
+  --red-alert: #FF303B;
+  --text-primary: #F5F5F5;
+  --text-secondary: #A1A1AA;
+  --border-charcoal: #202020;
+  --success: #24D18B;
+}
+
+@layer base {
+  body {
+    background-color: #070707;
+    color: #F5F5F5;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, pre, .font-mono, [data-mono] {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  }
+}
+
+/* Custom scrollbars for obsidian, carbon & gold aesthetic */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #070707;
+}
+::-webkit-scrollbar-thumb {
+  background: #202020;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8C6A16;
+}
+
+/* Subtle cyber grid texture */
+.cyber-grid-texture {
+  background-image: radial-gradient(rgba(245, 197, 66, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Metallic gold text gradients and utility classes */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF1C5 0%, #F5C542 50%, #D6A83E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow {
+  box-shadow: 0 0 20px rgba(245, 197, 66, 0.14);
+}
+
+.gold-glow-sm {
+  box-shadow: 0 0 10px rgba(245, 197, 66, 0.08);
+}
+
+.red-glow-sm {
+  box-shadow: 0 0 12px rgba(255, 48, 59, 0.16);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 16px rgba(245, 197, 66, 0.14);
+}
+
+.gold-gradient-btn {
+  background: linear-gradient(135deg, #FDE08B 0%, #F5C542 50%, #D6A83E 100%);
+  color: #070707;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-gradient-btn:hover {
+  background: linear-gradient(135deg, #FFF1C5 0%, #FCE79C 50%, #F5C542 100%);
+  box-shadow: 0 4px 18px rgba(245, 197, 66, 0.28);
+  transform: translateY(-1px);
+}
+
+/* Luxury Range Slider Styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #1A1A1A;
+  border-radius: 4px;
+  height: 5px;
+  outline: none;
+  transition: background 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #F5C542;
+  border: 2px solid #070707;
+  box-shadow: 0 0 8px rgba(245, 197, 66, 0.5);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #FDE08B;
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(245, 197, 66, 0.8);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #F5C542;
+  border: 2px solid #070707;
+  box-shadow: 0 0 8px rgba(245, 197, 66, 0.5);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background: #FDE08B;
+  transform: scale(1.15);
+}
+
+/* Focus ring for accessibility */
+.gold-focus:focus-visible {
+  outline: 2px solid #F5C542;
+  outline-offset: 2px;
+}
